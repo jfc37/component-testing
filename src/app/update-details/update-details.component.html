@@ -1,14 +1,18 @@
-<h2>Update details</h2>
-<p>Hi 👋</p>
+<h2>Personal Details</h2>
 <form [formGroup]="formGroup">
   <fieldset>
     <label for="firstName">First Name</label>
     <input type="text" id="firstName" formControlName="firstName" />
+    <span class="validation-error">{{ firstNameValidation }}</span>
   </fieldset>
   <fieldset>
-    <label for="surname">Surname</label>
-    <input type="text" id="surname" formControlName="surname" />
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" formControlName="lastName" />
+  </fieldset>
+  <fieldset>
+    <label for="email">Email</label>
+    <input type="text" id="email" formControlName="email" />
   </fieldset>
 
-  <button>Save</button>
+  <button (click)="saveClicked()">Save</button>
 </form>

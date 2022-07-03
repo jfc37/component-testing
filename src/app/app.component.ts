@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DetailsModel } from './update-details/update-details.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styles: [],
 })
 export class AppComponent {
-  title = 'component-testing';
+  public details: DetailsModel = {
+    email: 'tom.brady@nfl.com',
+    firstName: 'Tom',
+    lastName: 'Brady',
+  };
+
+  public save(updatedDetails: DetailsModel): void {
+    alert('Save: ' + JSON.stringify(updatedDetails));
+  }
 }
